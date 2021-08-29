@@ -18,7 +18,8 @@ def run_thread(n):
         try:
             change_it(n)
         finally:
-            # 改完释放锁
+            # 改完释放锁，用try...finally来确保锁一定会被释放，
+            # 否则那些苦苦等待锁的线程将永远等待下去，成为死线程
             lock.release()
 
 
