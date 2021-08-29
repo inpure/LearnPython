@@ -1,0 +1,50 @@
+lines = sys.stdin.read().splitlines()    #读取多行输入并去掉回车
+
+strs = [line for line in lines]     #字符串列表
+
+Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列。
+
+sort 与 sorted 区别：
+sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。
+list 的 sort 方法返回的是对已经存在的列表进行操作，无返回值，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。
+s.sort(key=lambda x: x.lower()) 或 s.sort(key=str.lower)：不区分字母大小写排序
+
+ord() 返回字符的ASCII码值
+
+判断字符串是否只由英文字母组成：isalpha()方法语法：如果字符串至少有一个字符并且所有字符都是字母则返回 True，否则返回 False。
+
+str.endswith(s) 判断字符串str是否以字符串 s 结束
+
+isupper()，islower() 判断字符大小写
+
+str为字符串
+str.isalnum() 所有字符都是数字或者字母
+str.isalpha() 所有字符都是字母
+str.isdigit() 所有字符都是数字
+str.islower() 所有字符都是小写
+str.isupper() 所有字符都是大写
+str.istitle() 所有单词都是首字母大写，像标题
+str.isspace() 所有字符都是空白字符、\t、\n、\r
+tolower() 将大写字母转换为小写字母
+toupper() 将小写字母转换为大写字母
+
+join() 方法用于将序列(sequence)中的元素以指定的字符连接生成一个新的字符串，如用空格连接: sting = ' '.join(sequence)。注意：sequence里的元素只能为str类型
+bin(x) x 为int 或 long int 数字，返回的是二进制表示的字符串
+isdecimal() 判断字符串是否只包含十进制字符： str.isdecimal()
+ljust()  返回一个原字符串左对齐,并使用 fillchar(默认空格) 填充至 width 长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串:str.ljust(width[, fillchar])
+eval() 函数用来执行一个字符串表达式，并返回表达式的值: eval('2 + 2') >>> 4
+reversed(seq) 函数返回的是一个迭代器，如果要将其显示出来，需要list(reversed(seq))才行
+print('%.3f' % (3 / 4)) ：保留3位小数
+bisect.bisect(a, x) 返回a 中维持有序插入 x 的点位置
+re.findall(pattern, string) 返回string中所有与pattern相匹配的全部字串，返回列表
+round(x, n) : 返回浮点数x的四舍五入值,保留小n位小数点位数。
+
+for i, element in enumerate(seq):
+     print i, element
+
+注意：
+a = b = [] 得到的列表结果不对，不能这么赋值，需要分开赋值
+列表切片：冒号来表示子序列的起点（包含）和终点（不包含）
+for ... else 语句:  else 部分是可选的。当循环中包含他时，它总会在 for 循环结束后开始执行，除非程序遇到了 break 语句。
+
+'cookie': 'cna=V+LUGC92xTsCAX1GOKG7K45v; tracknick=%5Cu4E28%5Cu9A6C%5Cu4E36%5Cu4E91%5Cu4E28; _cc_=V32FPkk%2Fhw%3D%3D; sgcookie=E100Z29xFUONO75f7IiE7hmW2rcxFc4GU9URIOZBXlhdndgX5gqW%2BdioaUKCwvagZB4QvkNAQPtOYZX67v3qCkpcpw%3D%3D; thw=cn; enc=WvP3MDQDek1onAyJv1oKNbuQELc5HuEPiR7Jrr3WJAVunczV5YZu9H14sdNSj8qDLwkaipN5Fzll6iUwS7E9Pw%3D%3D; hng=CN%7Czh-CN%7CCNY%7C156; UM_distinctid=17830838f4533a-0d1bfb4d027bda-5771133-1fa400-17830838f46afb; JSESSIONID=EDCF4B3641F08AF21DBFCB0294386DEA; xlly_s=1; cookie2=1464af1ea1d5b208fc7b261153569fad; t=24cf01d975ce2a0eaedbacd1ac966969; _tb_token_=337736e885b5e; v=0; mt=ci%3D-1_1; tfstk=cNARBwt9_mmk6A7v7LHmAeRkEB5RaUodczs394VvRB-QJxl-NsYwsCF0YY_Q2s3A.; l=eBIhj1z4jRu7d8owBO5CKurza7792Ldf1oVzaNbMiInca6BPa_pa5NCKq04HudtjgtCXuUxPVKlOcR3D8i4dg2HvCbKrCyConxvO.; isg=BI2N06Fy0Eu7vHUNy5ksOBSfnKkHasE8k-nCns8ZfCZFxq54nbsdDJ4UMFqgAtn0'
